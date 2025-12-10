@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <title>Thrive Page Emulator</title>
-
-    <!-- Bootstrap 4 -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -12,70 +10,1119 @@
   </head>
 
   <body>
-    <!-- Thrive Wrapper -->
     <div id="MainCopy_ContentWrapper">
-      <!-- This is the ONLY widget Thrive renders for logged-in user -->
       <div class="ContentItemHtml sg-marker">
         <div class="HtmlContent">
-          <div class="container my-5 RF-Agency-1JustCity" data-agencyid="5159">
-            <div class="row mb-4">
-              <div class="col">
-                <h1 class="mb-3">My Evaluation & Reporting - 1JustCity</h1>
-                <p class="text-muted">
-                  Access your evaluation surveys and reporting tools.
-                </p>
-              </div>
-            </div>
-
-            <div class="survey-links"></div>
+          <div id="rf-agency-container" data-agencyid="5159">
+            CONTENT GOES HERE
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Sample JSON -->
+    <!-- Load YOUR STATIC mapping MANUALLY COPY FROM agency-security-map.json-->
     <script>
-      window.allAgencySurveyLinks = {
+      window.agencySecurityMap = {
         5159: {
-          annualOutcomes: {
-            en: "https://test.com/1justcity/en",
-            fr: "https://test.com/1justcity/fr",
+          securityGroup: "RF-Agency-1JustCity",
+          agencyName: "1JustCity",
+          role: "Partner",
+          stream: 2,
+        },
+        5345: {
+          securityGroup: "RF-Agency-Albion",
+          agencyName: "Albion Neighbourhood Services",
+          role: "Partner",
+          stream: 2,
+        },
+        5290: {
+          securityGroup: "RF-Agency-AseCommunity",
+          agencyName: "Ase Community Foundation for Black Canadians",
+          role: "PPGP",
+          stream: 3,
+        },
+        4710: {
+          securityGroup: "RF-Agency-BissellCentre",
+          agencyName: "Bissell Centre",
+          role: "Partner",
+          stream: 2,
+        },
+        4897: {
+          securityGroup: "RF-Agency-CMHA-Kamloops",
+          agencyName: "Canadian Mental Health Association Kamloops Branch",
+          role: "Partner",
+          stream: 2,
+        },
+        4530: {
+          securityGroup: "RF-Agency-CaseCommunity",
+          agencyName: "Case Community Services",
+          role: "PPGP",
+          stream: 3,
+        },
+        4835: {
+          securityGroup: "RF-Agency-EBO",
+          agencyName: "Centre d'education financiere EBO",
+          role: "Hub Lead",
+          stream: 1,
+        },
+        5249: {
+          securityGroup: "RF-Agency-CNIB",
+          agencyName: "Canadian National Institute for the Blind (CNIB)",
+          role: "PPGP",
+          stream: 3,
+        },
+        5114: {
+          securityGroup: "RF-Agency-CodeF",
+          agencyName: "Code F Santé financière pour tous!",
+          role: "Partner",
+          stream: 2,
+        },
+        4708: {
+          securityGroup: "RF-Agency-ConnectionsForFamilies",
+          agencyName: "Connections For Families",
+          role: "Partner",
+          stream: 2,
+        },
+        4975: {
+          securityGroup: "RF-Agency-NDG",
+          agencyName: "Conseil Communautaire NDG",
+          role: "Partner",
+          stream: 2,
+        },
+        5156: {
+          securityGroup: "RF-Agency-DABC",
+          agencyName: "Disability Alliance BC",
+          role: "Partner",
+          stream: 2,
+        },
+        4432: {
+          securityGroup: "RF-Agency-FSGV",
+          agencyName: "Family Services of Greater Vancouver",
+          role: "Hub Lead",
+          stream: 1,
+        },
+        5639: {
+          securityGroup: "RF-Agency-FSWE",
+          agencyName: "Family Services Windsor-Essex",
+          role: "Partner",
+          stream: 2,
+        },
+        4908: {
+          securityGroup: "RF-Agency-Finautonome",
+          agencyName: "Finautonome",
+          role: "PPGP",
+          stream: 3,
+        },
+        5563: {
+          securityGroup: "RF-Agency-FlatBayBand",
+          agencyName: "Flat Bay Band Inc.",
+          role: "PPGP",
+          stream: 3,
+        },
+        4659: {
+          securityGroup: "RF-Agency-FoundationsLearning",
+          agencyName: "Foundations Learning & Skills Saskatchewan",
+          role: "Partner",
+          stream: 2,
+        },
+        5061: {
+          securityGroup: "RF-Agency-HopeBlooms",
+          agencyName: "Hope Blooms Youth Social Entrepreneurial Ventures",
+          role: "PPGP",
+          stream: 3,
+        },
+        5527: {
+          securityGroup: "RF-Agency-HopeHouseGuelph",
+          agencyName: "Hope House Guelph",
+          role: "Partner",
+          stream: 2,
+        },
+        4487: {
+          securityGroup: "RF-Agency-JHSPEI",
+          agencyName: "John Howard Society PEI",
+          role: "Partner",
+          stream: 2,
+        },
+        4747: {
+          securityGroup: "RF-Agency-Kaleidoscope",
+          agencyName: "Kaleidoscope Social Impact",
+          role: "Partner",
+          stream: 2,
+        },
+        4663: {
+          securityGroup: "RF-Agency-KenoraChiefs",
+          agencyName: "Kenora Chiefs Advisory",
+          role: "PPGP",
+          stream: 3,
+        },
+
+        5531: {
+          securityGroup: "RF-Agency-KivalliqInuit",
+          agencyName: "Kivalliq Inuit Association",
+          role: "PPGP",
+          stream: 3,
+        },
+
+        5644: {
+          securityGroup: "RF-Agency-LaunchOkanagan",
+          agencyName: "Launch Financial Education Society",
+          role: "Partner",
+          stream: 2,
+        },
+
+        4705: {
+          securityGroup: "RF-Agency-UnitedWay",
+          agencyName: "United Way of the Alberta Capital Region",
+          role: "Hub Lead",
+          stream: 1,
+        },
+        "4705_2": {
+          securityGroup: "RF-Agency-EFSNA",
+          agencyName: "Elizabeth Fry Society of Northern Alberta",
+          role: "Partner",
+          hubLead: "4705",
+          stream: 1,
+        },
+        "4705_1": {
+          securityGroup: "RF-Agency-NorwoodCentre",
+          agencyName: "Norwood Child and Family Resource Centre",
+          role: "Partner",
+          hubLead: "4705",
+          stream: 1,
+        },
+
+        "---UW-Calgary---": {
+          id: null,
+          securityGroup: "RF-Agency-UWACR",
+          agencyName: "United Way Calgary and Area",
+          role: "Hub Lead",
+          stream: 1,
+        },
+
+        4456: {
+          securityGroup: "RF-Agency-Momentum",
+          agencyName: "Momentum",
+          role: "Partner",
+          stream: 2,
+        },
+        "4456_1": {
+          securityGroup: "RF-Agency-RiseCalgary",
+          agencyName: "Rise Calgary",
+          role: "Partner",
+          hubLead: "4456",
+          stream: 2,
+        },
+
+        "---Calgary-Partners---": {
+          id: null,
+          securityGroup: "RF-Agency-ASAP",
+          agencyName: "A Synergy A Prosperity (ASAP)",
+          role: "Partner",
+          stream: 1,
+        },
+        "RF-Agency-BowValleyCollege": {
+          id: null,
+          securityGroup: "RF-Agency-BowValleyCollege",
+          agencyName: "Bow Valley College",
+          role: "Partner",
+        },
+        "RF-Agency-CCECA": {
+          id: null,
+          securityGroup: "RF-Agency-CCECA",
+          agencyName: "Calgary Chinese Elderly Citizens Association",
+          role: "Partner",
+        },
+        "RF-Agency-CIWA": {
+          id: null,
+          securityGroup: "RF-Agency-CIWA",
+          agencyName: "Calgary Immigrant Womens Association",
+          role: "Partner",
+        },
+        "RF-Agency-CalgaryJHS": {
+          id: null,
+          securityGroup: "RF-Agency-CalgaryJHS",
+          agencyName: "Calgary John Howard Society",
+          role: "Partner",
+        },
+        "RF-Agency-Carya": {
+          id: null,
+          securityGroup: "RF-Agency-Carya",
+          agencyName: "Carya Society of Calgary",
+        },
+        "RF-Agency-CentreForNewcomers": {
+          id: null,
+          securityGroup: "RF-Agency-CentreForNewcomers",
+          agencyName: "Center for Newcomers",
+        },
+        "RF-Agency-DiscoveryHouse": {
+          id: null,
+          securityGroup: "RF-Agency-DiscoveryHouse",
+          agencyName: "Discovery House Family Violence Prevention Society",
+        },
+        "RF-Agency-SORCe": {
+          id: null,
+          securityGroup: "RF-Agency-SORCe",
+          agencyName: "Distress Center / SORCe",
+        },
+        "RF-Agency-HullServices": {
+          id: null,
+          securityGroup: "RF-Agency-HullServices",
+          agencyName: "Hull Services",
+        },
+        "RF-Agency-ISC": {
+          id: null,
+          securityGroup: "RF-Agency-ISC",
+          agencyName: "Immigrant Services Calgary",
+        },
+        "RF-Agency-JFSC": {
+          id: null,
+          securityGroup: "RF-Agency-JFSC",
+          agencyName: "Jewish Family Services Calgary",
+        },
+        "RF-Agency-Kindred": {
+          id: null,
+          securityGroup: "RF-Agency-Kindred",
+          agencyName: "Kindred Connections Society",
+        },
+        "RF-Agency-TIES": {
+          id: null,
+          securityGroup: "RF-Agency-TIES",
+          agencyName: "The Immigrant Education Society",
+        },
+        "RF-Agency-Trellis": {
+          id: null,
+          securityGroup: "RF-Agency-Trellis",
+          agencyName: "Trellis Society",
+        },
+        "RF-Agency-KerbyCentre": {
+          id: null,
+          securityGroup: "RF-Agency-KerbyCentre",
+          agencyName: "Unison at Kerby Centre",
+        },
+        "RF-Agency-WomensCentreCalgary": {
+          id: null,
+          securityGroup: "RF-Agency-WomensCentreCalgary",
+          agencyName: "Women's Centre of Calgary",
+        },
+
+        5122: {
+          securityGroup: "RF-Agency-WoodGreen",
+          agencyName: "WoodGreen Community Services",
+          role: "Hub Lead",
+          stream: 1,
+        },
+        "5122_3": {
+          securityGroup: "RF-Agency-ACSA",
+          agencyName: "Agincourt Community Services Association",
+          role: "Partner",
+          hubLead: "5122",
+          stream: 1,
+        },
+        "5122_4": {
+          securityGroup: "RF-Agency-CICS",
+          agencyName: "Centre for Immigrant and Community Services",
+          role: "Partner",
+          hubLead: "5122",
+          stream: 1,
+        },
+        "5122_5": {
+          securityGroup: "RF-Agency-DixieBloor",
+          agencyName: "Dixie Bloor Neighbourhood Centre",
+          role: "Partner",
+          hubLead: "5122",
+          stream: 1,
+        },
+        "5122_2": {
+          securityGroup: "RF-Agency-JaneFinch",
+          agencyName: "Jane/Finch Centre",
+          role: "Partner",
+          hubLead: "5122",
+          stream: 1,
+        },
+        "5122_6": {
+          securityGroup: "RF-Agency-NYCH",
+          agencyName: "North York Community House",
+          role: "Partner",
+          hubLead: "5122",
+          stream: 1,
+        },
+        "5122_1": {
+          securityGroup: "RF-Agency-WestNH",
+          agencyName: "West Neighbourhood House",
+          role: "Partner",
+          hubLead: "5122",
+          stream: 1,
+        },
+
+        5027: {
+          securityGroup: "RF-Agency-Pinnguaq",
+          agencyName: "Pinnguaq Association (o/a Ampere)",
+          role: "Partner",
+          stream: 2,
+        },
+        5437: {
+          securityGroup: "RF-Agency-RIWC",
+          agencyName: "Riverdale Immigrant Women's Centre",
+          role: "Partner",
+          stream: 2,
+        },
+        5186: {
+          securityGroup: "RF-Agency-Roots",
+          agencyName: "Roots Community Services Inc.",
+          role: "PPGP",
+          stream: 3,
+        },
+
+        5299: {
+          securityGroup: "RF-Agency-SEED",
+          agencyName: "SEED Winnipeg",
+          role: "Hub Lead",
+          stream: 1,
+        },
+        "5229_7": {
+          securityGroup: "RF-Agency-ACOMI",
+          agencyName: "African Communities of Manitoba Inc. (ACOMI)",
+          role: "Partner",
+          hubLead: "5299",
+          stream: 1,
+        },
+        "5229_6": {
+          securityGroup: "RF-Agency-CMDCI",
+          agencyName: "Canadian Multicultural Disability Centre Inc.",
+          role: "Partner",
+          hubLead: "5299",
+          stream: 1,
+        },
+        "5229_2": {
+          securityGroup: "RF-Agency-CMWI",
+          agencyName: "Canadian Muslim Women's Institute",
+          role: "Partner",
+          hubLead: "5299",
+          stream: 1,
+        },
+        "5229_1": {
+          securityGroup: "RF-Agency-CFCS",
+          agencyName: "Community Financial Counselling Services Inc. (CFCS)",
+          role: "Partner",
+          hubLead: "5299",
+          stream: 1,
+        },
+        "5229_5": {
+          securityGroup: "RF-Agency-IRCOM",
+          agencyName:
+            "Immigrant and Refugee Community Organization of Manitoba Inc.",
+          role: "Partner",
+          hubLead: "5299",
+          stream: 1,
+        },
+        "5229_3": {
+          securityGroup: "RF-Agency-ManitobaPossible",
+          agencyName: "Manitoba Possible",
+          role: "Partner",
+          hubLead: "5299",
+          stream: 1,
+        },
+        "5229_4": {
+          securityGroup: "RF-Agency-NewJourney",
+          agencyName: "New Journey Housing",
+          role: "Partner",
+          hubLead: "5299",
+          stream: 1,
+        },
+
+        4931: {
+          securityGroup: "RF-Agency-SCSC",
+          agencyName: "Sudbury Community Service Centre",
+          role: "Partner",
+          stream: 2,
+        },
+
+        5272: {
+          securityGroup: "RF-Agency-The519",
+          agencyName: "The 519",
+          role: "Partner",
+          stream: 2,
+        },
+
+        5196: {
+          securityGroup: "RF-Agency-TheWorkingCentre",
+          agencyName: "The Working Centre",
+          role: "Hub Lead",
+          stream: 1,
+        },
+
+        4498: {
+          securityGroup: "RF-Agency-TBayCounselling",
+          agencyName: "Thunder Bay Counselling",
+          role: "Hub Lead",
+          stream: 1,
+        },
+
+        4992: {
+          securityGroup: "RF-Agency-UDC",
+          agencyName: "Union des consommateurs",
+          role: "Hub Lead",
+          stream: 1,
+        },
+
+        "4992_2": {
+          securityGroup: "RF-Agency-ACEF-GrandPortage",
+          agencyName: "ACEF du Grand-Portage",
+          role: "Partner",
+          hubLead: "4992",
+          stream: 1,
+        },
+        "4992_1": {
+          securityGroup: "RF-Agency-ACEF-SudOuest",
+          agencyName: "ACEF du Sud-Ouest de Montréal",
+          role: "Partner",
+          hubLead: "4992",
+          stream: 1,
+        },
+
+        "RF-Agency-ACEF-EstMontreal": {
+          id: null,
+          securityGroup: "RF-Agency-ACEF-EstMontreal",
+          agencyName: "ACEF de l'Est de Montréal",
+          role: "Partner",
+          hubLead: "4992",
+        },
+        "RF-Agency-ACEF-NordMontreal": {
+          id: null,
+          securityGroup: "RF-Agency-ACEF-NordMontreal",
+          agencyName: "ACEF du Nord de Montréal",
+          role: "Partner",
+          hubLead: "4992",
+        },
+        "RF-Agency-ACEF-Estrie": {
+          id: null,
+          securityGroup: "RF-Agency-ACEF-Estrie",
+          agencyName: "ACEF Estrie",
+          role: "Partner",
+          hubLead: "4992",
+        },
+
+        "4992_6": {
+          securityGroup: "RF-Agency-ACEF-Lanaudiere",
+          agencyName: "ACEF Lanaudière",
+          role: "Partner",
+          hubLead: "4992",
+          stream: 1,
+        },
+
+        "RF-Agency-ACEF-MonteregieEst": {
+          id: null,
+          securityGroup: "RF-Agency-ACEF-MonteregieEst",
+          agencyName: "ACEF Montérégie-Est",
+          role: "Partner",
+          hubLead: "4992",
+        },
+
+        "4992_4": {
+          securityGroup: "RF-Agency-ACEF-RiveSud",
+          agencyName: "ACEF Rive-Sud",
+          role: "Partner",
+          hubLead: "4992",
+        },
+
+        "4992_7": {
+          securityGroup: "RF-Agency-ACEF-ABE",
+          agencyName:
+            "Association Coopérative d'Économie Familiale - Appalaches Beauce Etchemins",
+          role: "Partner",
+          hubLead: "4992",
+        },
+
+        "4992_5": {
+          securityGroup: "RF-Agency-CIBES-Mauricie",
+          agencyName:
+            "Centre d’intervention budgétaire et sociale de la Mauricie",
+          role: "Partner",
+          hubLead: "4992",
+        },
+
+        "4992_6_dup": {
+          securityGroup: "RF-Agency-EspaceFinances",
+          agencyName: "Espace Finances",
+          role: "Partner",
+          hubLead: "4992",
+        },
+
+        "RF-Agency-SAC-Mauricie": {
+          id: null,
+          securityGroup: "RF-Agency-SAC-Mauricie",
+          agencyName: "Service d’aide au consommateur (SAC)",
+          role: "Partner",
+          hubLead: "4992",
+        },
+
+        5790: {
+          securityGroup: "RF-Agency-YukonLiteracy",
+          agencyName: "Yukon Literacy Coalition",
+          role: "PPGP",
+          stream: 3,
+        },
+
+        4356: {
+          securityGroup: "RF-Agency-YWCACanada",
+          agencyName: "YWCA Canada",
+          role: "Hub Lead",
+          stream: 1,
+        },
+        "4356_4": {
+          securityGroup: "RF-Agency-YWCA-Calgary",
+          agencyName: "YWCA Calgary",
+          role: "Partner",
+          hubLead: "4356",
+          stream: 1,
+        },
+        "RF-Agency-YWCA-Cambridge": {
+          id: null,
+          securityGroup: "RF-Agency-YWCA-Cambridge",
+          agencyName: "YWCA Cambridge",
+          role: "Partner",
+          hubLead: "4356",
+        },
+        "4356_1": {
+          securityGroup: "RF-Agency-YWCA-Halifax",
+          agencyName: "YWCA Halifax",
+          role: "Partner",
+          hubLead: "4356",
+          stream: 1,
+        },
+        "4356_3": {
+          securityGroup: "RF-Agency-YWCA-Hamilton",
+          agencyName: "YWCA Hamilton",
+          role: "Partner",
+          hubLead: "4356",
+          stream: 1,
+        },
+        "4356_5": {
+          securityGroup: "RF-Agency-YWCA-MetroVancouver",
+          agencyName: "YWCA Metro Vancouver",
+          role: "Partner",
+          hubLead: "4356",
+          stream: 1,
+        },
+        "4356_7": {
+          securityGroup: "RF-Agency-YWCA-Montreal",
+          agencyName: "YWCA Montreal (Y des femmes de Montréal)",
+          role: "Partner",
+          hubLead: "4356",
+          stream: 1,
+        },
+        "RF-Agency-YWCA-Moncton": {
+          id: null,
+          securityGroup: "RF-Agency-YWCA-Moncton",
+          agencyName: "YWCA Moncton",
+          role: "Partner",
+          hubLead: "4356",
+        },
+        "RF-Agency-YWCA-NiagaraRegion": {
+          id: null,
+          securityGroup: "RF-Agency-YWCA-NiagaraRegion",
+          agencyName: "YWCA Niagara Region",
+          role: "Partner",
+          hubLead: "4356",
+        },
+        "4356_8": {
+          securityGroup: "RF-Agency-YWCA-PrinceAlbert",
+          agencyName: "YWCA Prince Albert",
+          role: "Partner",
+          hubLead: "4356",
+          stream: 1,
+        },
+        "4356_6": {
+          securityGroup: "RF-Agency-YWCA-Regina",
+          agencyName: "YWCA Regina",
+          role: "Partner",
+          hubLead: "4356",
+          stream: 1,
+        },
+        "4356_2": {
+          securityGroup: "RF-Agency-YMCA-YWCA-VancouverIsland",
+          agencyName: "YMCA-YWCA of Vancouver Island",
+          role: "Partner",
+          hubLead: "4356",
+          stream: 1,
+        },
+
+        5035: {
+          securityGroup: "RF-Agency-YWCAStJohns",
+          agencyName: "YWCA St. John's",
+          role: "Partner",
+          stream: 2,
+        },
+      };
+    </script>
+
+    <!-- Load the JSON generated by csv-to-json.js -->
+    <script>
+      /* Paste content from final-survey-data.json here */
+      window.allAgencySurveyLinks = {
+        4356: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc4356en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc4356fr",
+          },
+        },
+        4432: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc4432en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc4432fr",
+          },
+        },
+        4456: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc4456en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc4456fr",
+          },
+        },
+        4487: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc4487en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc4487fr",
+          },
+        },
+        4498: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc4498en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc4498fr",
+          },
+        },
+        4530: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc4530en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc4530fr",
+          },
+        },
+        4659: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc4659en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc4659fr",
+          },
+        },
+        4663: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc4663en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc4663fr",
+          },
+        },
+        4705: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc4705en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc4705fr",
+          },
+        },
+        4708: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc4708en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc4708fr",
+          },
+        },
+        4710: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc4710en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc4710fr",
+          },
+        },
+        4747: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc4747en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc4747fr",
+          },
+        },
+        4835: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc4835en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc4835fr",
+          },
+        },
+        4897: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc4897en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc4897fr",
+          },
+        },
+        4908: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc4908en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc4908fr",
+          },
+        },
+        4931: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc4931en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc4931fr",
+          },
+        },
+        4975: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc4975en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc4975fr",
+          },
+        },
+        4992: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc4992en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc4992fr",
+          },
+        },
+        5027: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5027en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5027fr",
+          },
+        },
+        5035: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5035en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5035fr",
+          },
+        },
+        5061: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5061en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5061fr",
+          },
+        },
+        5114: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5114en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5114fr",
+          },
+        },
+        5122: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5122en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5122fr",
+          },
+        },
+        5156: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5156en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5156fr",
+          },
+        },
+        5159: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5159en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5159fr",
+          },
+        },
+        5186: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5186en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5186fr",
+          },
+        },
+        5196: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5196en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5196fr",
+          },
+        },
+        5249: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5249en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5249fr",
+          },
+        },
+        5272: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5272en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5272fr",
+          },
+        },
+        5290: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5290en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5290fr",
+          },
+        },
+        5299: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5299en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5299fr",
           },
         },
         5345: {
-          annualOutcomes: {
-            en: "https://test.com/albion/en",
-            fr: "https://test.com/albion/fr",
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5345en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5345fr",
+          },
+        },
+        5437: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5437en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5437fr",
+          },
+        },
+        5527: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5527en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5527fr",
+          },
+        },
+        5531: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5531en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5531fr",
+          },
+        },
+        5563: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5563en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5563fr",
+          },
+        },
+        5639: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5639en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5639fr",
+          },
+        },
+        5644: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5644en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5644fr",
+          },
+        },
+        5790: {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5790en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5790fr",
+          },
+        },
+        "5229_1": {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5229_1en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5229_1fr",
+          },
+        },
+        "5229_2": {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5229_2en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5229_2fr",
+          },
+        },
+        "5229_3": {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5229_3en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5229_3fr",
+          },
+        },
+        "5229_4": {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5229_4en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5229_4fr",
+          },
+        },
+        "5229_5": {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5229_5en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5229_5fr",
+          },
+        },
+        "5229_6": {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5229_6en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5229_6fr",
+          },
+        },
+        "5229_7": {
+          A1: {
+            en: "https://logicaloutcomes.com/l.php?lc=lc5229_7en",
+            fr: "https://logicaloutcomes.com/l.php?lc=lc5229_7fr",
           },
         },
       };
     </script>
 
-    <!-- Simple JS (server-side hiding means only one widget exists) -->
+    <!-- Rendering Logic -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const widget = document.querySelector(".sg-marker");
-        if (!widget) return;
-
-        const container = widget.querySelector("[data-agencyid]");
+        const container = document.getElementById("rf-agency-container");
         if (!container) return;
 
         const agencyId = container.dataset.agencyid;
-        const data = window.allAgencySurveyLinks[agencyId];
+        const meta = window.agencySecurityMap[agencyId];
+        const surveyData = window.allAgencySurveyLinks[agencyId];
 
-        if (!data) return;
-
-        const output = widget.querySelector(".survey-links");
-
-        output.innerHTML = `
-    <h3>Your Surveys</h3>
-    <p>
-      Annual Outcomes:<br>
-      <a href="${data.annualOutcomes.en}" target="_blank">English</a> |
-      <a href="${data.annualOutcomes.fr}" target="_blank">Français</a>
-    </p>
+        //
+        // Build the entire page dynamically
+        //
+        let html = `
+    <div class="container my-5 ${
+      meta?.securityGroup || ""
+    }" data-agencyid="${agencyId}">
+    
+      <!-- Page Header -->
+      <div class="row mb-4">
+        <div class="col">
+          <h1 class="mb-3">My Evaluation & Reporting – ${
+            meta?.agencyName || "Unknown Agency"
+          }</h1>
+          <p class="text-muted">Access your evaluation surveys and reporting tools.</p>
+        </div>
+      </div>
+      
+      <!-- Surveys & Reporting Section -->
+      <div class="row mb-3">
+        <div class="col">
+          <h3 class="mb-3">Surveys & Reporting</h3>
+        </div>
+      </div>
+      <div class="row">
   `;
+
+        //
+        // If surveys exist, generate cards
+        //
+        if (surveyData) {
+          for (const round of Object.keys(surveyData)) {
+            const { en, fr } = surveyData[round];
+
+            html += `
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"><i class="fa fa-clipboard mr-2"></i>${round} Evaluation Survey</h5>
+              <p class="card-text flex-grow-1">Please complete this evaluation survey.</p>
+              <a href="${en}" target="_blank" class="btn btn-primary mt-auto">Start (English)</a>
+              <a href="${fr}" target="_blank" class="btn btn-secondary mt-2">Start (Français)</a>
+            </div>
+          </div>
+        </div>
+      `;
+          }
+        } else {
+          html += `
+      <div class="col-md-12">
+        <div class="alert alert-warning">
+          No surveys are available yet for ${meta?.agencyName || "this agency"}.
+        </div>
+      </div>
+    `;
+        }
+
+        //
+        // Results & Insights Section
+        //
+        html += `
+      </div> <!-- end row -->
+
+      <div class="row mt-5 mb-3">
+        <div class="col">
+          <h3 class="mb-3">Results & Insights</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="alert alert-info">
+            <i class="fa fa-info-circle mr-2"></i>
+            No dashboards are available yet. Your evaluation results will appear here as the project progresses.
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- end container -->
+  `;
+
+        //
+        // Inject generated HTML
+        //
+        container.innerHTML = html;
       });
+
+      //   document.addEventListener("DOMContentLoaded", function () {
+      //     const widget = document.querySelector(".sg-marker");
+      //     if (!widget) return;
+
+      //     const container = widget.querySelector("[data-agencyid]");
+      //     if (!container) return;
+
+      //     const agencyId = container.dataset.agencyid;
+
+      //     document.getElementById("debugAgency").textContent = agencyId;
+
+      //     const meta = window.agencySecurityMap[agencyId];
+      //     const surveyData = window.allAgencySurveyLinks[agencyId];
+
+      //     const header = document.getElementById("agencyHeader");
+      //     if (meta && header) {
+      //       header.textContent = `My Evaluation & Reporting – ${meta.agencyName}`;
+      //     }
+
+      //     const output = widget.querySelector(".survey-links");
+
+      //     if (!surveyData) {
+      //       output.innerHTML = `
+      //   <div class="alert alert-info">
+      //     No evaluation surveys are currently available for ${
+      //       meta ? meta.agencyName : "this agency"
+      //     }.
+      //   </div>
+      // `;
+      //       return;
+      //     }
+
+      //     let html = `<h3>Your Surveys</h3>`;
+
+      //     // Optional: show stream + role
+      //     if (meta) {
+      //       html += `
+      //   <p class="text-muted">
+      //     <strong>Stream:</strong> ${meta.stream} &nbsp;
+      //     <strong>Role:</strong> ${meta.role}
+      //   </p>
+      // `;
+      //     }
+
+      //     for (const round of Object.keys(surveyData)) {
+      //       html += `
+      //   <p>
+      //     <strong>${round}</strong><br>
+      //     <a href="${surveyData[round].en}" target="_blank">English</a> |
+      //     <a href="${surveyData[round].fr}" target="_blank">Français</a>
+      //   </p>
+      // `;
+      //     }
+
+      //     output.innerHTML = html;
+      //   });
+
+      //   document.addEventListener("DOMContentLoaded", function () {
+      //     const widget = document.querySelector(".sg-marker");
+      //     if (!widget) return;
+
+      //     const container = widget.querySelector("[data-agencyid]");
+      //     if (!container) return;
+
+      //     const agencyId = container.dataset.agencyid;
+      //     document.getElementById("debugAgency").textContent = agencyId;
+      //     const surveyData = window.allAgencySurveyLinks[agencyId];
+      //     if (!surveyData) {
+      //       console.warn("No survey links for agency:", agencyId);
+      //       return;
+      //     }
+
+      //     const output = widget.querySelector(".survey-links");
+
+      //     let html = `<h3>Your Surveys</h3>`;
+
+      //     for (const round of Object.keys(surveyData)) {
+      //       html += `
+      //         <p><strong>${round}</strong><br>
+      //           <a href="${surveyData[round].en}" target="_blank">English</a> |
+      //           <a href="${surveyData[round].fr}" target="_blank">Français</a>
+      //         </p>
+      //       `;
+      //     }
+
+      //     output.innerHTML = html;
+      //   });
     </script>
   </body>
 </html>
