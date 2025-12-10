@@ -1,0 +1,34 @@
+
+---
+
+# ✅ **.gitignore**
+
+This ignore file is scoped for your Node-based dev environment and prevents accidental check-ins of generated files.
+
+```gitignore
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Generated JSON
+final-survey-data.json
+
+# CSV files received from Logical Outcomes
+lo-survey-links-sample.csv
+lo-survey-links-*.csv
+
+# VS Code settings
+.vscode/
+
+# Environment files (future-proofing)
+.env
+.env.local
+.env.*.local

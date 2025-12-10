@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Thrive Page Emulator</title>
+
+    <!-- Bootstrap 4 -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Thrive Wrapper -->
+    <div id="MainCopy_ContentWrapper">
+      <!-- This is the ONLY widget Thrive renders for logged-in user -->
+      <div class="ContentItemHtml sg-marker">
+        <div class="HtmlContent">
+          <div class="container my-5 RF-Agency-1JustCity" data-agencyid="5159">
+            <div class="row mb-4">
+              <div class="col">
+                <h1 class="mb-3">My Evaluation & Reporting - 1JustCity</h1>
+                <p class="text-muted">
+                  Access your evaluation surveys and reporting tools.
+                </p>
+              </div>
+            </div>
+
+            <div class="survey-links"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sample JSON -->
+    <script>
+      window.allAgencySurveyLinks = {
+        5159: {
+          annualOutcomes: {
+            en: "https://test.com/1justcity/en",
+            fr: "https://test.com/1justcity/fr",
+          },
+        },
+        5345: {
+          annualOutcomes: {
+            en: "https://test.com/albion/en",
+            fr: "https://test.com/albion/fr",
+          },
+        },
+      };
+    </script>
+
+    <!-- Simple JS (server-side hiding means only one widget exists) -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const widget = document.querySelector(".sg-marker");
+        if (!widget) return;
+
+        const container = widget.querySelector("[data-agencyid]");
+        if (!container) return;
+
+        const agencyId = container.dataset.agencyid;
+        const data = window.allAgencySurveyLinks[agencyId];
+
+        if (!data) return;
+
+        const output = widget.querySelector(".survey-links");
+
+        output.innerHTML = `
+    <h3>Your Surveys</h3>
+    <p>
+      Annual Outcomes:<br>
+      <a href="${data.annualOutcomes.en}" target="_blank">English</a> |
+      <a href="${data.annualOutcomes.fr}" target="_blank">Français</a>
+    </p>
+  `;
+      });
+    </script>
+  </body>
+</html>
