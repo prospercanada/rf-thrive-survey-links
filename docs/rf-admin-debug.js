@@ -177,57 +177,132 @@ document.addEventListener("DOMContentLoaded", function () {
   //     alert(`Highlighted ${blocks.length} agency widgets.`);
   //   };
 
+  //   document.getElementById("btnHighlight").onclick = function () {
+  //     const blocks = document.querySelectorAll("[data-agencyid]");
+
+  //     blocks.forEach((el) => {
+  //       const agencyId = el.dataset.agencyid;
+
+  //       // Extract survey rounds for this agency
+  //       const surveyInfo = window.allAgencySurveyLinks[agencyId];
+  //       let roundCount = 0;
+
+  //       if (surveyInfo) {
+  //         roundCount = Object.keys(surveyInfo).length;
+  //       }
+
+  //       // Build bubble text
+  //       const label = surveyInfo
+  //         ? `${agencyId} • ${roundCount} survey${roundCount !== 1 ? "s" : ""}`
+  //         : `${agencyId} • 0 surveys`;
+
+  //       // Highlight block
+  //       el.style.outline = "3px solid red";
+  //       el.style.margin = "10px 0";
+  //       el.style.padding = "10px";
+  //       el.style.position = "relative";
+
+  //       // Remove old bubble if exists
+  //       const oldBubble = el.querySelector(".rf-agency-bubble");
+  //       if (oldBubble) oldBubble.remove();
+
+  //       // Insert improved bubble
+  //       const bubble = document.createElement("div");
+  //       bubble.className = "rf-agency-bubble";
+  //       bubble.textContent = label;
+
+  //       bubble.style.position = "absolute";
+  //       bubble.style.top = "-8px";
+  //       bubble.style.right = "-8px";
+  //       bubble.style.background = "#0D47A1";
+  //       bubble.style.color = "white";
+  //       bubble.style.fontSize = "11px";
+  //       bubble.style.padding = "4px 8px";
+  //       bubble.style.borderRadius = "14px";
+  //       bubble.style.fontWeight = "bold";
+  //       bubble.style.whiteSpace = "nowrap";
+  //       bubble.style.boxShadow = "0 0 4px rgba(0,0,0,0.3)";
+  //       bubble.style.zIndex = "100002";
+
+  //       el.appendChild(bubble);
+  //     });
+
+  //     alert("Agency widgets highlighted with survey counts.");
+  //   };
+
+  let highlightOn = false;
+
   document.getElementById("btnHighlight").onclick = function () {
     const blocks = document.querySelectorAll("[data-agencyid]");
 
-    blocks.forEach((el) => {
-      const agencyId = el.dataset.agencyid;
+    if (!highlightOn) {
+      //
+      // TURN ON HIGHLIGHT MODE
+      //
+      blocks.forEach((el) => {
+        const agencyId = el.dataset.agencyid;
+        const surveyInfo = window.allAgencySurveyLinks[agencyId];
 
-      // Extract survey rounds for this agency
-      const surveyInfo = window.allAgencySurveyLinks[agencyId];
-      let roundCount = 0;
+        let roundCount = 0;
+        if (surveyInfo) {
+          roundCount = Object.keys(surveyInfo).length;
+        }
 
-      if (surveyInfo) {
-        roundCount = Object.keys(surveyInfo).length;
-      }
+        const label = surveyInfo
+          ? `${agencyId} • ${roundCount} survey${roundCount !== 1 ? "s" : ""}`
+          : `${agencyId} • 0 surveys`;
 
-      // Build bubble text
-      const label = surveyInfo
-        ? `${agencyId} • ${roundCount} survey${roundCount !== 1 ? "s" : ""}`
-        : `${agencyId} • 0 surveys`;
+        // Apply highlight styling
+        el.dataset._originalOutline = el.style.outline;
+        el.dataset._originalPadding = el.style.padding;
+        el.dataset._originalMargin = el.style.margin;
+        el.dataset._originalPosition = el.style.position;
 
-      // Highlight block
-      el.style.outline = "3px solid red";
-      el.style.margin = "10px 0";
-      el.style.padding = "10px";
-      el.style.position = "relative";
+        el.style.outline = "3px solid red";
+        el.style.margin = "10px 0";
+        el.style.padding = "10px";
+        el.style.position = "relative";
 
-      // Remove old bubble if exists
-      const oldBubble = el.querySelector(".rf-agency-bubble");
-      if (oldBubble) oldBubble.remove();
+        // Add bubble
+        const bubble = document.createElement("div");
+        bubble.className = "rf-agency-bubble";
+        bubble.textContent = label;
 
-      // Insert improved bubble
-      const bubble = document.createElement("div");
-      bubble.className = "rf-agency-bubble";
-      bubble.textContent = label;
+        bubble.style.position = "absolute";
+        bubble.style.top = "-8px";
+        bubble.style.right = "-8px";
+        bubble.style.background = "#0D47A1";
+        bubble.style.color = "white";
+        bubble.style.fontSize = "11px";
+        bubble.style.padding = "4px 8px";
+        bubble.style.borderRadius = "14px";
+        bubble.style.fontWeight = "bold";
+        bubble.style.whiteSpace = "nowrap";
+        bubble.style.boxShadow = "0 0 4px rgba(0,0,0,0.3)";
+        bubble.style.zIndex = "100002";
 
-      bubble.style.position = "absolute";
-      bubble.style.top = "-8px";
-      bubble.style.right = "-8px";
-      bubble.style.background = "#0D47A1";
-      bubble.style.color = "white";
-      bubble.style.fontSize = "11px";
-      bubble.style.padding = "4px 8px";
-      bubble.style.borderRadius = "14px";
-      bubble.style.fontWeight = "bold";
-      bubble.style.whiteSpace = "nowrap";
-      bubble.style.boxShadow = "0 0 4px rgba(0,0,0,0.3)";
-      bubble.style.zIndex = "100002";
+        el.appendChild(bubble);
+      });
 
-      el.appendChild(bubble);
-    });
+      this.textContent = "Clear Highlights";
+      highlightOn = true;
+    } else {
+      //
+      // TURN OFF HIGHLIGHT MODE (Restore original styles)
+      //
+      blocks.forEach((el) => {
+        el.style.outline = el.dataset._originalOutline || "";
+        el.style.padding = el.dataset._originalPadding || "";
+        el.style.margin = el.dataset._originalMargin || "";
+        el.style.position = el.dataset._originalPosition || "";
 
-    alert("Agency widgets highlighted with survey counts.");
+        // Remove bubbles
+        el.querySelectorAll(".rf-agency-bubble").forEach((b) => b.remove());
+      });
+
+      this.textContent = "Highlight Agency Widgets";
+      highlightOn = false;
+    }
   };
 
   // ------------------------------------------------------------
