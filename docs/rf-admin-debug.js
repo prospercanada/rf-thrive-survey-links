@@ -137,44 +137,97 @@ document.addEventListener("DOMContentLoaded", function () {
   //     alert("Agency widget blocks highlighted.");
   //   };
 
+  //   document.getElementById("btnHighlight").onclick = function () {
+  //     const blocks = document.querySelectorAll("[data-agencyid]");
+  //     let count = 0;
+
+  //     blocks.forEach((el) => {
+  //       count++;
+
+  //       // Add red highlight border
+  //       el.style.outline = "3px solid red";
+  //       el.style.margin = "10px 0";
+  //       el.style.padding = "10px";
+  //       el.style.position = "relative";
+
+  //       // Remove any old bubbles
+  //       const oldBubble = el.querySelector(".rf-agency-bubble");
+  //       if (oldBubble) oldBubble.remove();
+
+  //       // Create a count bubble
+  //       const bubble = document.createElement("div");
+  //       bubble.className = "rf-agency-bubble";
+  //       bubble.textContent = el.dataset.agencyid; // Show pseudokey such as "5229_03"
+
+  //       bubble.style.position = "absolute";
+  //       bubble.style.top = "-8px";
+  //       bubble.style.right = "-8px";
+  //       bubble.style.background = "#0D47A1";
+  //       bubble.style.color = "white";
+  //       bubble.style.fontSize = "12px";
+  //       bubble.style.padding = "4px 6px";
+  //       bubble.style.borderRadius = "12px";
+  //       bubble.style.fontWeight = "bold";
+  //       bubble.style.boxShadow = "0 0 4px rgba(0,0,0,0.3)";
+  //       bubble.style.zIndex = "100002";
+
+  //       el.appendChild(bubble);
+  //     });
+
+  //     alert(`Highlighted ${blocks.length} agency widgets.`);
+  //   };
+
   document.getElementById("btnHighlight").onclick = function () {
     const blocks = document.querySelectorAll("[data-agencyid]");
-    let count = 0;
 
     blocks.forEach((el) => {
-      count++;
+      const agencyId = el.dataset.agencyid;
 
-      // Add red highlight border
+      // Extract survey rounds for this agency
+      const surveyInfo = window.allAgencySurveyLinks[agencyId];
+      let roundCount = 0;
+
+      if (surveyInfo) {
+        roundCount = Object.keys(surveyInfo).length;
+      }
+
+      // Build bubble text
+      const label = surveyInfo
+        ? `${agencyId} • ${roundCount} survey${roundCount !== 1 ? "s" : ""}`
+        : `${agencyId} • 0 surveys`;
+
+      // Highlight block
       el.style.outline = "3px solid red";
       el.style.margin = "10px 0";
       el.style.padding = "10px";
       el.style.position = "relative";
 
-      // Remove any old bubbles
+      // Remove old bubble if exists
       const oldBubble = el.querySelector(".rf-agency-bubble");
       if (oldBubble) oldBubble.remove();
 
-      // Create a count bubble
+      // Insert improved bubble
       const bubble = document.createElement("div");
       bubble.className = "rf-agency-bubble";
-      bubble.textContent = el.dataset.agencyid; // Show pseudokey such as "5229_03"
+      bubble.textContent = label;
 
       bubble.style.position = "absolute";
       bubble.style.top = "-8px";
       bubble.style.right = "-8px";
       bubble.style.background = "#0D47A1";
       bubble.style.color = "white";
-      bubble.style.fontSize = "12px";
-      bubble.style.padding = "4px 6px";
-      bubble.style.borderRadius = "12px";
+      bubble.style.fontSize = "11px";
+      bubble.style.padding = "4px 8px";
+      bubble.style.borderRadius = "14px";
       bubble.style.fontWeight = "bold";
+      bubble.style.whiteSpace = "nowrap";
       bubble.style.boxShadow = "0 0 4px rgba(0,0,0,0.3)";
       bubble.style.zIndex = "100002";
 
       el.appendChild(bubble);
     });
 
-    alert(`Highlighted ${blocks.length} agency widgets.`);
+    alert("Agency widgets highlighted with survey counts.");
   };
 
   // ------------------------------------------------------------
