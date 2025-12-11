@@ -128,13 +128,53 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   };
 
+  //   document.getElementById("btnHighlight").onclick = function () {
+  //     document.querySelectorAll("[data-agencyid]").forEach((el) => {
+  //       el.style.outline = "3px solid red";
+  //       el.style.margin = "10px 0";
+  //       el.style.padding = "10px";
+  //     });
+  //     alert("Agency widget blocks highlighted.");
+  //   };
+
   document.getElementById("btnHighlight").onclick = function () {
-    document.querySelectorAll("[data-agencyid]").forEach((el) => {
+    const blocks = document.querySelectorAll("[data-agencyid]");
+    let count = 0;
+
+    blocks.forEach((el) => {
+      count++;
+
+      // Add red highlight border
       el.style.outline = "3px solid red";
       el.style.margin = "10px 0";
       el.style.padding = "10px";
+      el.style.position = "relative";
+
+      // Remove any old bubbles
+      const oldBubble = el.querySelector(".rf-agency-bubble");
+      if (oldBubble) oldBubble.remove();
+
+      // Create a count bubble
+      const bubble = document.createElement("div");
+      bubble.className = "rf-agency-bubble";
+      bubble.textContent = el.dataset.agencyid; // Show pseudokey such as "5229_03"
+
+      bubble.style.position = "absolute";
+      bubble.style.top = "-8px";
+      bubble.style.right = "-8px";
+      bubble.style.background = "#0D47A1";
+      bubble.style.color = "white";
+      bubble.style.fontSize = "12px";
+      bubble.style.padding = "4px 6px";
+      bubble.style.borderRadius = "12px";
+      bubble.style.fontWeight = "bold";
+      bubble.style.boxShadow = "0 0 4px rgba(0,0,0,0.3)";
+      bubble.style.zIndex = "100002";
+
+      el.appendChild(bubble);
     });
-    alert("Agency widget blocks highlighted.");
+
+    alert(`Highlighted ${blocks.length} agency widgets.`);
   };
 
   // ------------------------------------------------------------
