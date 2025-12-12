@@ -95,6 +95,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   debugPanel.innerHTML = `
   <strong>Admin Debug</strong><br>
+    <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2L13.5 6H18L14.5 8.5L16 13L12 10.5L8 13L9.5 8.5L6 6H10.5L12 2Z"
+            fill="#90CAF9"/>
+    </svg>
+    <strong>Admin Debug</strong>
+  </div>
 
   <button id="btnShowSurveyJson" class="rf-debug-btn" style="margin-top:6px;">
     Survey Links JSON
