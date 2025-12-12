@@ -94,13 +94,13 @@ document.addEventListener("DOMContentLoaded", function () {
   debugPanel.style.boxShadow = "0 0 8px rgba(0,0,0,0.4)";
 
   debugPanel.innerHTML = `
-  <strong>Admin Debug</strong><br>
-    <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-         xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2L13.5 6H18L14.5 8.5L16 13L12 10.5L8 13L9.5 8.5L6 6H10.5L12 2Z"
-            fill="#90CAF9"/>
-    </svg>
+    <div style="display:flex;align-items:center;gap:8px;">
+  <svg width="18" height="18" viewBox="0 0 16 16">
+    <image href="https://disability.benefitswayfinder.org/favicons/favicon-16x16.png"
+           width="16" height="16" />
+  </svg>
+  <strong>Admin Debug</strong>
+</div>
     <strong>Admin Debug</strong>
   </div>
 
