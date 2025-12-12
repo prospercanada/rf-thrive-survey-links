@@ -4,32 +4,20 @@
 // -------------------------------------------------------
 // EXPECTS inside Thrive page:
 //
-//   window.agencySecurityMap = {
-//     "5122_00": {
-//        agencyName: "...",
-//        securityGroup: "...",        // optional
-//        role: "...",                 // optional
-//        stream: 1,
-//        domains: ["example.org"]     // optional
-//     }
-//   };
-//
+//   window.agencySecurityMap = { ...non-sensitive metadata... };
 //   window.allAgencySurveyLinks = { ...survey links (private)... };
-//
-//   window.agencyEmailOverrides = {
-//     "user@gmail.com": { agency: "5122_00" }
-//   };
+//   window.agencyEmailOverrides = { ...optional email → agency map... };
 //
 // Thrive then calls:
 //
 //   window.renderEvaluationPage();
 //
-// This script contains NO survey URLs and NO sensitive data.
+// This script must contain NO survey URLs and NO sensitive information.
 //
 
 (function () {
   //
-  // Utility: Escape HTML
+  // Utility: Escape HTML to prevent rendering issues
   //
   function escapeHtml(str) {
     return String(str || "")
@@ -45,28 +33,11 @@
   //
   function getLoggedInUserEmail() {
     const emailEl = document.querySelector(".panel-email");
-    if (!emailEl) return null;
-    return emailEl.textContent.trim().toLowerCase();
-  }
-
-  //
-  // Utility: Resolve agency by email domain
-  //
-  function resolveAgencyByDomain(email) {
-    if (!email || !window.agencySecurityMap) return null;
-
-    const domain = email.split("@")[1];
-    if (!domain) return null;
-
-    for (const [agencyId, meta] of Object.entries(window.agencySecurityMap)) {
-      if (
-        Array.isArray(meta.domains) &&
-        meta.domains.map((d) => d.toLowerCase()).includes(domain)
-      ) {
-        return agencyId;
-      }
+    if (!emailEl) {
+      console.warn("RF widget: No #rf-agency-container found.");
+      return;
     }
-    return null;
+    return emailEl.textContent.trim().toLowerCase();
   }
 
   //
@@ -79,52 +50,32 @@
       return;
     }
 
-    const domAgencyId = container.dataset.agencyid || null;
+    //
+    // Step 1: Start with agencyId from DOM
+    //
+    let agencyId = container.dataset.agencyid || null;
+
+    //
+    // Step 2: Email-based override (Gmail, contractors, etc.)
+    //
     const userEmail = getLoggedInUserEmail();
+    const emailOverride =
+      userEmail && window.agencyEmailOverrides
+        ? window.agencyEmailOverrides[userEmail]
+        : null;
 
-    let agencyId = null;
-    let resolutionMethod = null;
-
-    //
-    // 1. Explicit email override (highest priority)
-    //
-    if (userEmail && window.agencyEmailOverrides?.[userEmail]?.agency) {
-      agencyId = window.agencyEmailOverrides[userEmail].agency;
-      resolutionMethod = "email-override";
+    if (emailOverride?.agency) {
+      agencyId = emailOverride.agency;
     }
 
     //
-    // 2. Email domain match
-    //
-    if (!agencyId && userEmail) {
-      const domainMatch = resolveAgencyByDomain(userEmail);
-      if (domainMatch) {
-        agencyId = domainMatch;
-        resolutionMethod = "email-domain";
-      }
-    }
-
-    //
-    // 3. Fallback to DOM-provided agency (SG-based)
-    //
-    if (!agencyId && domAgencyId) {
-      agencyId = domAgencyId;
-      resolutionMethod = "dom-agencyid";
-    }
-
-    //
-    // 4. Fail closed
+    // Step 3: Final validation
     //
     if (!agencyId) {
-      console.warn("RF widget: Unable to resolve agency.", {
-        userEmail,
-        domAgencyId,
-      });
-
+      console.warn("RF widget: Unable to resolve agency for user.");
       container.innerHTML = `
         <div class="alert alert-danger">
-          <strong>Access not configured</strong><br>
-          We could not determine your organization.
+          Unable to determine your organization.
           Please contact Prosper Canada for access.
         </div>
       `;
@@ -136,9 +87,11 @@
 
     const agencyName = escapeHtml(meta?.agencyName || "Your Organization");
     const securityGroup = escapeHtml(meta?.securityGroup || "");
+    const role = meta?.role ? escapeHtml(meta.role) : "";
+    const stream = meta?.stream ? escapeHtml(meta.stream) : "";
 
     //
-    // Build page HTML
+    // Start building full page HTML
     //
     let html = `
       <div class="container my-5 ${securityGroup}" data-agencyid="${agencyId}">
@@ -164,7 +117,7 @@
     `;
 
     //
-    // Surveys
+    // If there are surveys, create cards
     //
     if (surveys) {
       for (const round of Object.keys(surveys)) {
@@ -208,10 +161,10 @@
     }
 
     //
-    // Results & Insights
+    // Results & Insights section
     //
     html += `
-        </div>
+        </div> <!-- end surveys row -->
 
         <div class="row mt-5 mb-3">
           <div class="col">
@@ -223,28 +176,22 @@
           <div class="col-md-12">
             <div class="alert alert-info">
               <i class="fa fa-info-circle mr-2"></i>
-              No dashboards are available yet.
+              No dashboards are available yet. Your evaluation results will appear here as the project progresses.
             </div>
           </div>
         </div>
 
-      </div>
+      </div> <!-- end container -->
     `;
 
+    //
+    // Inject HTML into the Thrive container
+    //
     container.innerHTML = html;
-
-    //
-    // Optional: expose resolution method for admin/debug tools
-    //
-    window.__rfResolutionInfo = {
-      agencyId,
-      resolutionMethod,
-      userEmail,
-    };
   }
 
   //
-  // Expose globally
+  // Expose globally (safe)
   //
   window.renderEvaluationPage = renderEvaluationPage;
 })();
