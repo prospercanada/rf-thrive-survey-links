@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const isImpersonating = !!document.querySelector("#pnlImpersonation");
 
   // Only show debug tools for REAL admins
-  if (!isAdmin || isImpersonating) return;
+  //   if (!isAdmin || isImpersonating) return;
+  if (!isAdmin && !document.querySelector("#pnlImpersonation")) return;
 
   // ------------------------------------------------------------
   // Popup modal function (with close button + ESC + click outside)
@@ -123,6 +124,17 @@ document.addEventListener("DOMContentLoaded", function () {
     Highlight Agency Widgets
   </button>
 `;
+
+  if (isImpersonating) {
+    const label = document.createElement("div");
+    label.textContent = "IMPERSONATION MODE";
+    label.style.fontSize = "11px";
+    label.style.color = "#FFD54F";
+    label.style.marginBottom = "6px";
+    label.style.fontWeight = "bold";
+    label.style.textAlign = "center";
+    debugPanel.appendChild(label);
+  }
 
   document.body.appendChild(debugPanel);
 
