@@ -6,7 +6,6 @@
 //
 //   window.agencySecurityMap = { ...non-sensitive metadata... };
 //   window.allAgencySurveyLinks = { ...survey links (private)... };
-//   window.agencyEmailOverrides = { ...optional email → agency map... };
 //
 // Thrive then calls:
 //
@@ -29,15 +28,6 @@
   }
 
   //
-  // Utility: Read logged-in user's email from Thrive UI
-  //
-  function getLoggedInUserEmail() {
-    const emailEl = document.querySelector(".panel-email");
-    if (!emailEl) return null;
-    return emailEl.textContent.trim().toLowerCase();
-  }
-
-  //
   // Core Rendering Function
   //
   function renderEvaluationPage() {
@@ -47,35 +37,9 @@
       return;
     }
 
-    //
-    // Step 1: Start with agencyId from DOM
-    //
-    let agencyId = container.dataset.agencyid || null;
-
-    //
-    // Step 2: Email-based override (Gmail, contractors, etc.)
-    //
-    const userEmail = getLoggedInUserEmail();
-    const emailOverride =
-      userEmail && window.agencyEmailOverrides
-        ? window.agencyEmailOverrides[userEmail]
-        : null;
-
-    if (emailOverride?.agency) {
-      agencyId = emailOverride.agency;
-    }
-
-    //
-    // Step 3: Final validation
-    //
+    const agencyId = container.dataset.agencyid;
     if (!agencyId) {
-      console.warn("RF widget: Unable to resolve agency for user.");
-      container.innerHTML = `
-        <div class="alert alert-danger">
-          Unable to determine your organization.
-          Please contact Prosper Canada for access.
-        </div>
-      `;
+      console.warn("RF widget: No data-agencyid attribute found.");
       return;
     }
 
@@ -118,7 +82,7 @@
     //
     if (surveys) {
       for (const round of Object.keys(surveys)) {
-        const { en, fr } = surveys[round];
+        const { en, fr } = surveys[round]; // from private Thrive inline script
 
         html += `
           <div class="col-md-4 mb-4">
@@ -148,6 +112,9 @@
         `;
       }
     } else {
+      //
+      // Fallback if no surveys are defined yet
+      //
       html += `
         <div class="col-md-12">
           <div class="alert alert-warning">

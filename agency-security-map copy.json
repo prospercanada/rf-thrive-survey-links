@@ -3,529 +3,510 @@
     "securityGroup": "RF-Agency-1JustCity",
     "agencyName": "1JustCity",
     "role": "Partner",
-    "stream": 2,
-    "domains": ["1justcity.ca"]
+    "stream": 2
   },
+
   "5345_00": {
     "securityGroup": "RF-Agency-Albion",
     "agencyName": "Albion Neighbourhood Services",
     "role": "Partner",
-    "stream": 2,
-    "domains": ["albionservices.ca"]
+    "stream": 2
   },
+
+  "NO_ID_ARKTIS": {
+    "securityGroup": "RF-Agency-Arktis",
+    "agencyName": "ARKTIS Solutions",
+    "role": "Unknown",
+    "stream": null,
+    "hubLead": null,
+    "note": "No OW pseudokey assigned yet; keep until replaced by Kivalliq."
+  },
+
   "5290_00": {
     "securityGroup": "RF-Agency-AseCommunity",
     "agencyName": "Ase Community Foundation for Black Canadians",
     "role": "PPGP",
-    "stream": 3,
-    "domains": ["asecommunityfoundation.com"]
+    "stream": 3
   },
+
   "4710_00": {
     "securityGroup": "RF-Agency-BissellCentre",
     "agencyName": "Bissell Centre",
     "role": "Partner",
-    "stream": 2,
-    "domains": ["bissellcentre.org"]
+    "stream": 2
   },
+
   "4897_00": {
     "securityGroup": "RF-Agency-CMHA-Kamloops",
-    "agencyName": "Canadian Mental Health Association Kamloops Branch",
+    "agencyName": "Canadian Mental Health Association Kamloops",
     "role": "Partner",
-    "stream": 2,
-    "domains": ["cmhakamloops.ca"]
+    "stream": 2
   },
+
   "4530_00": {
     "securityGroup": "RF-Agency-CaseCommunity",
     "agencyName": "Case Community Services",
     "role": "PPGP",
-    "stream": 3,
-    "domains": ["casecommunity.org"]
+    "stream": 3
   },
+
   "4835_00": {
     "securityGroup": "RF-Agency-EBO",
     "agencyName": "Centre d'education financiere EBO",
     "role": "Hub Lead",
-    "stream": 1,
-    "domains": ["centre-ebo.com"]
+    "stream": 1
   },
+
   "5249_00": {
     "securityGroup": "RF-Agency-CNIB",
-    "agencyName": "Canadian National Institute for the Blind, CNIB",
+    "agencyName": "CNIB",
     "role": "PPGP",
-    "stream": 3,
-    "domains": ["cnib.ca"]
+    "stream": 3
   },
+
   "5114_00": {
     "securityGroup": "RF-Agency-CodeF",
     "agencyName": "Code F Santé financière pour tous!",
     "role": "Partner",
-    "stream": 2,
-    "domains": ["codef.ca"]
+    "stream": 2
   },
+
   "4708_00": {
     "securityGroup": "RF-Agency-ConnectionsForFamilies",
     "agencyName": "Connections For Families",
     "role": "Partner",
-    "stream": 2,
-    "domains": ["connectionsforfamilies.ca"]
+    "stream": 2
   },
+
   "4975_00": {
     "securityGroup": "RF-Agency-NDG",
     "agencyName": "Conseil Communautaire NDG",
     "role": "Partner",
-    "stream": 2,
-    "domains": ["ndg.ca"]
+    "stream": 2
   },
+
   "5156_00": {
     "securityGroup": "RF-Agency-DABC",
     "agencyName": "Disability Alliance BC",
     "role": "Partner",
-    "stream": 2,
-    "domains": ["dabc.ca"]
+    "stream": 2
   },
+
   "4432_00": {
     "securityGroup": "RF-Agency-FSGV",
     "agencyName": "Family Services of Greater Vancouver",
     "role": "Hub Lead",
-    "stream": 1,
-    "domains": ["fsgv.ca"]
+    "stream": 1
   },
+
   "5639_00": {
     "securityGroup": "RF-Agency-FSWE",
     "agencyName": "Family Services Windsor-Essex",
     "role": "Partner",
-    "stream": 2,
-    "domains": ["fswe.ca"]
+    "stream": 2
   },
+
   "4908_00": {
     "securityGroup": "RF-Agency-Finautonome",
     "agencyName": "Finautonome",
     "role": "PPGP",
-    "stream": 3,
-    "domains": ["finautonome.org"]
+    "stream": 3
   },
+
   "5563_00": {
     "securityGroup": "RF-Agency-FlatBayBand",
     "agencyName": "Flat Bay Band Inc.",
     "role": "PPGP",
-    "stream": 3,
-    "domains": ["gmail.com"]
+    "stream": 3
   },
+
   "4659_00": {
     "securityGroup": "RF-Agency-FoundationsLearning",
     "agencyName": "Foundations Learning & Skills Saskatchewan",
     "role": "Partner",
-    "stream": 2,
-    "domains": ["foundationslearning.com"]
+    "stream": 2
   },
+
   "5061_00": {
     "securityGroup": "RF-Agency-HopeBlooms",
     "agencyName": "Hope Blooms Youth Social Entrepreneurial Ventures",
     "role": "PPGP",
-    "stream": 3,
-    "domains": ["hopeblooms.ca"]
+    "stream": 3
   },
+
   "5527_00": {
     "securityGroup": "RF-Agency-HopeHouseGuelph",
     "agencyName": "Hope House Guelph",
     "role": "Partner",
-    "stream": 2,
-    "domains": ["hopehouseguelph.ca"]
+    "stream": 2
   },
+
   "4487_00": {
     "securityGroup": "RF-Agency-JHSPEI",
     "agencyName": "John Howard Society PEI",
     "role": "Partner",
-    "stream": 2,
-    "domains": ["jhspei.ca"]
+    "stream": 2
   },
+
   "4747_00": {
     "securityGroup": "RF-Agency-Kaleidoscope",
     "agencyName": "Kaleidoscope Social Impact",
     "role": "Partner",
-    "stream": 2,
-    "domains": ["kaleidoscopeimpact.com"]
+    "stream": 2
   },
+
   "4663_00": {
     "securityGroup": "RF-Agency-KenoraChiefs",
     "agencyName": "Kenora Chiefs Advisory",
     "role": "PPGP",
-    "stream": 3,
-    "domains": ["kenorachiefs.org"]
+    "stream": 3
   },
+
   "5644_00": {
     "securityGroup": "RF-Agency-LaunchOkanagan",
     "agencyName": "Launch Financial Education Society",
     "role": "Partner",
-    "stream": 2,
-    "domains": ["launchokanagan.ca"]
+    "stream": 2
   },
+
   "5531_00": {
     "securityGroup": "RF-Agency-KivalliqInuit",
     "agencyName": "Kivalliq Inuit Association",
     "role": "PPGP",
-    "stream": 3,
-    "domains": ["kivalliqinuit.ca"]
+    "stream": 3
   },
+
   "4705_00": {
     "securityGroup": "RF-Agency-UnitedWay",
     "agencyName": "United Way of the Alberta Capital Region",
     "role": "Hub Lead",
-    "stream": 1,
-    "domains": ["myunitedway.ca"]
+    "stream": 1
   },
   "4705_02": {
     "securityGroup": "RF-Agency-EFSNA",
     "agencyName": "Elizabeth Fry Society of Northern Alberta",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["efrynorthernalberta.com"],
-    "hubLead": "4705_00"
+    "hubLead": "4705_00",
+    "stream": 1
   },
   "4705_01": {
     "securityGroup": "RF-Agency-NorwoodCentre",
-    "agencyName": "Norwood Child and Family Resource Centre (Norwood Centre)",
+    "agencyName": "Norwood Child and Family Resource Centre",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["norwoodcentre.com"],
-    "hubLead": "4705_00"
+    "hubLead": "4705_00",
+    "stream": 1
   },
+
   "4456_00": {
     "securityGroup": "RF-Agency-Momentum",
     "agencyName": "Momentum",
     "role": "Hub Lead",
-    "stream": 1,
-    "domains": ["momentum.org"]
+    "stream": 1
   },
   "4456_01": {
     "securityGroup": "RF-Agency-RiseCalgary",
     "agencyName": "Rise Calgary",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["risecalgary.org"],
-    "hubLead": "4456_00"
+    "hubLead": "4456_00",
+    "stream": 1
   },
+
   "5122_00": {
     "securityGroup": "RF-Agency-WoodGreen",
     "agencyName": "WoodGreen Community Services",
     "role": "Hub Lead",
-    "stream": 1,
-    "domains": ["woodgreen.org"]
+    "stream": 1
   },
   "5122_03": {
     "securityGroup": "RF-Agency-ACSA",
-    "agencyName": "Agincourt Community Services Association (ACSA)",
+    "agencyName": "Agincourt Community Services Association",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["agincourtcommunityservices.com"],
-    "hubLead": "5122_00"
+    "hubLead": "5122_00",
+    "stream": 1
   },
   "5122_04": {
     "securityGroup": "RF-Agency-CICS",
     "agencyName": "Centre for Immigrant and Community Services",
     "role": "Partner",
-    "stream": 1,
-    "domains": [],
-    "hubLead": "5122_00"
+    "hubLead": "5122_00",
+    "stream": 1
   },
   "5122_05": {
     "securityGroup": "RF-Agency-DixieBloor",
     "agencyName": "Dixie Bloor Neighbourhood Centre",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["dixiebloor.ca"],
-    "hubLead": "5122_00"
+    "hubLead": "5122_00",
+    "stream": 1
   },
   "5122_02": {
     "securityGroup": "RF-Agency-JaneFinch",
     "agencyName": "Jane/Finch Centre",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["janefinchcentre.org"],
-    "hubLead": "5122_00"
+    "hubLead": "5122_00",
+    "stream": 1
   },
   "5122_06": {
     "securityGroup": "RF-Agency-NYCH",
     "agencyName": "North York Community House",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["nych.ca"],
-    "hubLead": "5122_00"
+    "hubLead": "5122_00",
+    "stream": 1
   },
   "5122_01": {
     "securityGroup": "RF-Agency-WestNH",
     "agencyName": "West Neighbourhood House",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["westnh.org"],
-    "hubLead": "5122_00"
+    "hubLead": "5122_00",
+    "stream": 1
   },
+
   "5027_00": {
     "securityGroup": "RF-Agency-Pinnguaq",
     "agencyName": "Pinnguaq Association (o/a Ampere)",
     "role": "Partner",
-    "stream": 2,
-    "domains": ["pinnguaq.com"]
+    "stream": 2
   },
+
   "5437_00": {
     "securityGroup": "RF-Agency-RIWC",
     "agencyName": "Riverdale Immigrant Women's Centre",
     "role": "Partner",
-    "stream": 2,
-    "domains": ["riverdalehub.ca"]
+    "stream": 2
   },
+
   "5186_00": {
     "securityGroup": "RF-Agency-Roots",
     "agencyName": "Roots Community Services Inc.",
     "role": "PPGP",
-    "stream": 3,
-    "domains": ["rootscs.org"]
+    "stream": 3
   },
+
   "5299_00": {
     "securityGroup": "RF-Agency-SEED",
     "agencyName": "SEED Winnipeg",
     "role": "Hub Lead",
-    "stream": 1,
-    "domains": ["seedwinnipeg.ca"]
+    "stream": 1
   },
   "5229_07": {
     "securityGroup": "RF-Agency-ACOMI",
-    "agencyName": "African Communities of Manitoba Inc. (ACOMI)",
+    "agencyName": "African Communities of Manitoba Inc.",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["acomi.ca"],
-    "hubLead": "5299_00"
+    "hubLead": "5299_00",
+    "stream": 1
   },
   "5229_06": {
     "securityGroup": "RF-Agency-CMDCI",
     "agencyName": "Canadian Multicultural Disability Centre Inc.",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["cmdci.ca"],
-    "hubLead": "5299_00"
+    "hubLead": "5299_00",
+    "stream": 1
   },
   "5229_02": {
     "securityGroup": "RF-Agency-CMWI",
     "agencyName": "Canadian Muslim Women's Institute",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["cmwi.ca"],
-    "hubLead": "5299_00"
+    "hubLead": "5299_00",
+    "stream": 1
   },
   "5229_01": {
     "securityGroup": "RF-Agency-CFCS",
-    "agencyName": "Community Financial Counselling Services Inc. (CFCS)",
+    "agencyName": "Community Financial Counselling Services Inc.",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["cfcs.mb.ca"],
-    "hubLead": "5299_00"
+    "hubLead": "5299_00",
+    "stream": 1
   },
   "5229_05": {
     "securityGroup": "RF-Agency-IRCOM",
-    "agencyName": "Immigrant and Refugee Community Organization of Manitoba Inc.",
+    "agencyName": "Immigrant and Refugee Community Organization of Manitoba",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["ircom.ca"],
-    "hubLead": "5299_00"
+    "hubLead": "5299_00",
+    "stream": 1
   },
   "5229_03": {
     "securityGroup": "RF-Agency-ManitobaPossible",
     "agencyName": "Manitoba Possible",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["manitobapossible.ca"],
-    "hubLead": "5299_00"
+    "hubLead": "5299_00",
+    "stream": 1
   },
   "5229_04": {
     "securityGroup": "RF-Agency-NewJourney",
     "agencyName": "New Journey Housing",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["newjourneyhousing.com"],
-    "hubLead": "5299_00"
+    "hubLead": "5299_00",
+    "stream": 1
   },
+
   "4931_00": {
     "securityGroup": "RF-Agency-SCSC",
     "agencyName": "Sudbury Community Service Centre",
     "role": "Partner",
-    "stream": 2,
-    "domains": ["scscsudbury.ca"]
+    "stream": 2
   },
+
   "5272_00": {
     "securityGroup": "RF-Agency-The519",
     "agencyName": "The 519",
     "role": "Partner",
-    "stream": 2,
-    "domains": ["the519.org"]
+    "stream": 2
   },
+
   "5196_00": {
     "securityGroup": "RF-Agency-TheWorkingCentre",
     "agencyName": "The Working Centre",
     "role": "Hub Lead",
-    "stream": 1,
-    "domains": ["theworkingcentre.org"]
+    "stream": 1
   },
+
   "4498_00": {
     "securityGroup": "RF-Agency-TBayCounselling",
     "agencyName": "Thunder Bay Counselling",
     "role": "Hub Lead",
-    "stream": 1,
-    "domains": ["tbaycounselling.com"]
+    "stream": 1
   },
+
   "4992_00": {
     "securityGroup": "RF-Agency-UDC",
     "agencyName": "Union des consommateurs",
     "role": "Hub Lead",
-    "stream": 1,
-    "domains": ["uniondesconsommateurs.ca"]
+    "stream": 1
   },
   "4992_03": {
     "securityGroup": "RF-Agency-ACEF-IleJesus",
     "agencyName": "ACEF de l'île-Jésus",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["aceflaval.com"],
-    "hubLead": "4992_00"
+    "hubLead": "4992_00",
+    "stream": 1
   },
   "4992_02": {
     "securityGroup": "RF-Agency-ACEF-GrandPortage",
     "agencyName": "ACEF du Grand-Portage",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["videotron.ca"],
-    "hubLead": "4992_00"
+    "hubLead": "4992_00",
+    "stream": 1
   },
   "4992_01": {
     "securityGroup": "RF-Agency-ACEF-SudOuest",
     "agencyName": "ACEF du Sud-Ouest de Montréal",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["acefsom.ca"],
-    "hubLead": "4992_00"
+    "hubLead": "4992_00",
+    "stream": 1
   },
+
   "4992_06": {
     "securityGroup": "RF-Agency-ACEF-Lanaudiere",
     "agencyName": "ACEF Lanaudière",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["aceflanaudiere.ca"],
-    "hubLead": "4992_00"
+    "hubLead": "4992_00",
+    "stream": 1
   },
+
   "4992_04": {
     "securityGroup": "RF-Agency-ACEF-RiveSud",
     "agencyName": "ACEF Rive-Sud",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["acefrsm.com"],
-    "hubLead": "4992_00"
+    "hubLead": "4992_00",
+    "stream": 1
   },
+
   "4992_07": {
     "securityGroup": "RF-Agency-ACEF-ABE",
-    "agencyName": "Association Coopérative d'Économie Familiale - Appalaches Beauce Etchemins",
+    "agencyName": "ACEF Appalaches Beauce Etchemins",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["acef-abe.org"],
-    "hubLead": "4992_00"
+    "hubLead": "4992_00",
+    "stream": 1
   },
+
   "4992_05": {
     "securityGroup": "RF-Agency-CIBES-Mauricie",
     "agencyName": "Centre d’intervention budgétaire et sociale de la Mauricie",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["cibes-mauricie.ca"],
-    "hubLead": "4992_00"
+    "hubLead": "4992_00",
+    "stream": 1
   },
+
   "4992_08": {
     "securityGroup": "RF-Agency-EspaceFinances",
     "agencyName": "Espace Finances",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["espacefinances.ca"],
-    "hubLead": "4992_00"
+    "hubLead": "4992_00",
+    "stream": 1
   },
+
   "5790_00": {
     "securityGroup": "RF-Agency-YukonLiteracy",
     "agencyName": "Yukon Literacy Coalition",
     "role": "PPGP",
-    "stream": 3,
-    "domains": ["yukonliteracy.com"]
+    "stream": 3
   },
+
   "4356_00": {
     "securityGroup": "RF-Agency-YWCACanada",
     "agencyName": "YWCA Canada",
     "role": "Hub Lead",
-    "stream": 1,
-    "domains": ["ywcacanada.ca"]
+    "stream": 1
   },
   "4356_04": {
     "securityGroup": "RF-Agency-YWCA-Calgary",
     "agencyName": "YWCA Calgary",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["ywcalgary.ca"],
-    "hubLead": "4356_00"
+    "hubLead": "4356_00",
+    "stream": 1
   },
   "4356_01": {
     "securityGroup": "RF-Agency-YWCA-Halifax",
     "agencyName": "YWCA Halifax",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["ywcahalifax.com"],
-    "hubLead": "4356_00"
+    "hubLead": "4356_00",
+    "stream": 1
   },
   "4356_03": {
     "securityGroup": "RF-Agency-YWCA-Hamilton",
     "agencyName": "YWCA Hamilton",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["ywcahamilton.org"],
-    "hubLead": "4356_00"
+    "hubLead": "4356_00",
+    "stream": 1
   },
   "4356_05": {
     "securityGroup": "RF-Agency-YWCA-MetroVancouver",
     "agencyName": "YWCA Metro Vancouver",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["ywcavan.org"],
-    "hubLead": "4356_00"
+    "hubLead": "4356_00",
+    "stream": 1
   },
   "4356_07": {
     "securityGroup": "RF-Agency-YWCA-Montreal",
     "agencyName": "YWCA Montreal (Y des femmes de Montréal)",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["ydesfemmesmtl.org"],
-    "hubLead": "4356_00"
+    "hubLead": "4356_00",
+    "stream": 1
   },
   "4356_08": {
     "securityGroup": "RF-Agency-YWCA-PrinceAlbert",
     "agencyName": "YWCA Prince Albert",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["ywcaprincealbert.ca"],
-    "hubLead": "4356_00"
+    "hubLead": "4356_00",
+    "stream": 1
   },
   "4356_06": {
     "securityGroup": "RF-Agency-YWCA-Regina",
     "agencyName": "YWCA Regina",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["ywcaregina.com"],
-    "hubLead": "4356_00"
+    "hubLead": "4356_00",
+    "stream": 1
   },
   "4356_02": {
     "securityGroup": "RF-Agency-YMCA-YWCA-VancouverIsland",
     "agencyName": "YMCA-YWCA of Vancouver Island",
     "role": "Partner",
-    "stream": 1,
-    "domains": ["vancouverislandy.ca"],
-    "hubLead": "4356_00"
+    "hubLead": "4356_00",
+    "stream": 1
   },
+
   "5035_00": {
     "securityGroup": "RF-Agency-YWCAStJohns",
-    "agencyName": "YWCA St. +A1:C138John's",
+    "agencyName": "YWCA St. John's",
     "role": "Partner",
-    "stream": 2,
-    "domains": ["ywcastjohns.ca"]
+    "stream": 2
   }
 }

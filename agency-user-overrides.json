@@ -1,0 +1,36 @@
+{
+  "gregoryelward+thrive1c@gmail.com": {
+    "agency": "5159_00",
+    "note": "Testing access for 1JustCity via personal Gmail",
+    "addedBy": "IS",
+    "addedOn": "2025-03-01"
+  },
+
+  "jane.doe@gmail.com": {
+    "agency": "4992_03",
+    "note": "Temporary Gmail access for ACEF de l'île-Jésus",
+    "addedBy": "IS",
+    "addedOn": "2025-03-01"
+  },
+
+  "test.user@outlook.com": {
+    "agency": "4356_02",
+    "note": "Non-domain email used by YMCA-YWCA Vancouver Island staff",
+    "addedBy": "IS",
+    "addedOn": "2025-03-02"
+  },
+
+  "rf-admin.test@gmail.com": {
+    "agency": "5299_00",
+    "note": "Admin testing access for SEED Winnipeg surveys",
+    "addedBy": "IS",
+    "addedOn": "2025-03-02"
+  },
+
+  "partner.temp@gmail.com": {
+    "agency": "4705_01",
+    "note": "Partner agency staff without organizational email",
+    "addedBy": "IS",
+    "addedOn": "2025-03-03"
+  }
+}
