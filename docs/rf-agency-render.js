@@ -137,19 +137,6 @@
     const agencyName = escapeHtml(meta?.agencyName || "Your Organization");
     const securityGroup = escapeHtml(meta?.securityGroup || "");
 
-    // ------------------------------------------------------------
-    // Expose resolution info for admin debug panel
-    // ------------------------------------------------------------
-    window.__rfResolutionInfo = {
-      email: userEmail || null,
-      resolvedAgencyId: agencyId,
-      resolutionSource: emailOverride
-        ? "email-override"
-        : container.dataset.agencyid
-        ? "dom-agency"
-        : "unknown",
-    };
-
     //
     // Build page HTML
     //
@@ -249,10 +236,13 @@
     //
     // Optional: expose resolution method for admin/debug tools
     //
+    // ------------------------------------------------------------
+    // Expose resolution info for admin/debug tools (single source of truth)
+    // ------------------------------------------------------------
     window.__rfResolutionInfo = {
-      agencyId,
-      resolutionMethod,
       userEmail,
+      resolvedAgencyId: agencyId,
+      resolutionMethod, // "email-override" | "email-domain" | "dom-agencyid"
     };
   }
 
