@@ -94,28 +94,20 @@ document.addEventListener("DOMContentLoaded", function () {
   debugPanel.style.boxShadow = "0 0 8px rgba(0,0,0,0.4)";
 
   debugPanel.innerHTML = `
-  <strong>Admin Debug</strong><br>
+    <strong>Admin Debug</strong><br>
 
-  <button id="btnShowSurveyJson" class="rf-debug-btn" style="margin-top:6px;">
-    Survey Links JSON
-  </button><br>
+    <button id="btnShowSurveyJson" class="rf-debug-btn" style="margin-top:6px;">
+      Survey Links JSON
+    </button><br>
 
-  <button id="btnShowSecMap" class="rf-debug-btn" style="margin-top:6px;">
-    Agency Map JSON
-  </button><br>
+    <button id="btnShowSecMap" class="rf-debug-btn" style="margin-top:6px;">
+      Agency Map JSON
+    </button><br>
 
-  <button id="btnShowOverrides" class="rf-debug-btn" style="margin-top:6px;">
-    Email Overrides JSON
-  </button><br>
-
-  <button id="btnShowResolution" class="rf-debug-btn" style="margin-top:6px;">
-    Current User Resolution
-  </button><br>
-
-  <button id="btnHighlight" class="rf-debug-btn" style="margin-top:6px;">
-    Highlight Agency Widgets
-  </button>
-`;
+    <button id="btnHighlight" class="rf-debug-btn" style="margin-top:6px;">
+      Highlight Agency Widgets
+    </button>
+  `;
 
   document.body.appendChild(debugPanel);
 
@@ -133,24 +125,6 @@ document.addEventListener("DOMContentLoaded", function () {
     showPopup(
       "Agency Security Map",
       JSON.stringify(window.agencySecurityMap, null, 2)
-    );
-  };
-
-  document.getElementById("btnShowOverrides").onclick = function () {
-    showPopup(
-      "Agency Email Overrides",
-      window.agencyEmailOverrides
-        ? JSON.stringify(window.agencyEmailOverrides, null, 2)
-        : "No email overrides are currently defined."
-    );
-  };
-
-  document.getElementById("btnShowResolution").onclick = function () {
-    showPopup(
-      "Current User Resolution",
-      window.__rfResolutionInfo
-        ? JSON.stringify(window.__rfResolutionInfo, null, 2)
-        : "Resolution info not available. Has renderEvaluationPage() run?"
     );
   };
 

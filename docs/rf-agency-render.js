@@ -137,6 +137,19 @@
     const agencyName = escapeHtml(meta?.agencyName || "Your Organization");
     const securityGroup = escapeHtml(meta?.securityGroup || "");
 
+    // ------------------------------------------------------------
+    // Expose resolution info for admin debug panel
+    // ------------------------------------------------------------
+    window.__rfResolutionInfo = {
+      email: userEmail || null,
+      resolvedAgencyId: agencyId,
+      resolutionSource: emailOverride
+        ? "email-override"
+        : container.dataset.agencyid
+        ? "dom-agency"
+        : "unknown",
+    };
+
     //
     // Build page HTML
     //
