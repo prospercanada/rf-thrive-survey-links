@@ -101,8 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
   </svg>
   <strong>Admin Debug</strong>
 </div>
-    <strong>Admin Debug</strong>
-  </div>
+
 
   <button id="btnShowSurveyJson" class="rf-debug-btn" style="margin-top:6px;">
     Survey Links JSON
